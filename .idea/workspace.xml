@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d18af160-b3fd-42ff-a80e-f6433811ed92" name="Default Changelist" comment="" />
+    <list default="true" id="d18af160-b3fd-42ff-a80e-f6433811ed92" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagepro/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/imagepro/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/Screen Shot 2020-03-15 at 1.02.34 AM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/Screen Shot 2020-03-15 at 5.21.09 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/Screen Shot 2020-03-15 at 6.09.28 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/Screen Shot 2020-03-15 at 6.11.31 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/templates/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ZBQsdgZS6pyjjFRdkxPVu9YIg7" />
   <component name="ProjectViewState">
@@ -15,6 +27,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="SvnConfiguration">
@@ -35,9 +49,9 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="141" y="50" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1584312303308" />
-    <state x="317" y="244" key="com.intellij.ide.util.TipDialog" timestamp="1584310232539">
+    <state x="317" y="244" key="com.intellij.ide.util.TipDialog" timestamp="1585093378016">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="317" y="244" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1584310232539" />
+    <state x="317" y="244" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1585093378016" />
   </component>
 </project>
