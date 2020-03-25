@@ -25,7 +25,7 @@ SOFTWARE.
 # Django settings for imagepro project.
 import os.path
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 #get the dirName of the current project. should return the main dir
@@ -49,7 +49,7 @@ DATABASES = {
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ec2-35-175-145-77.compute-1.amazonaws.com]
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
