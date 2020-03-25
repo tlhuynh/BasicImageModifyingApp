@@ -4,17 +4,16 @@ from myapp.forms import UploadFileForm
 from PIL import Image, ImageOps,ImageFilter
 import os.path
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+PROJECT_ROOT = os.path.abspath(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+#~/Desktop/imagepro/
 
 def applyfilter (filename, preset):
-	inputfile = os.path.join(BASE_DIR, 'media', filename)
+	inputfile = os.path.join(PROJECT_ROOT, 'media', filename)
 
 	f=filename.split('.')
 	outputfilename = f[0] + '-out.jpg'
 
-	outputfile = os.path.join(BASE_DIR, 'myapp', 'templates', 'static', 'output', outputfilename)
-	#outputfile = '~/Desktop/imagepro/imagepro/myapp/templates/static/output/' + outputfilename
+	outputfile = os.path.join(PROJECT_ROOT, 'myapp', 'templates', 'static', 'output', outputfilename)
 
 	im = Image.open(inputfile)
 	if preset=='gray':
@@ -62,12 +61,10 @@ def home(request):
 		if form.is_valid():
 			preset=request.POST['preset']
 			outputfilename = handle_uploaded_file(request.FILES['myfilefield'],preset)
-			context = {'outputfilename': outputfilename}
-			return render(request, 'process.html', context)
+			return render(request, 'process.html', {'outputfilename': outputfilename})
 	else:
 		form = UploadFileForm()
-		context = {'form': form}
-	return render(request, 'index.html', context)
+	return render(request, 'index.html', {'form': form})
 
 
 def process(request):

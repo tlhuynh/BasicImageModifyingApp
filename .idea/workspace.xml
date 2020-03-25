@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d18af160-b3fd-42ff-a80e-f6433811ed92" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/templates/static/images/blur.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/templates/static/images/edge.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imagepro/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/imagepro/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Screen Shot 2020-03-15 at 1.02.34 AM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Screen Shot 2020-03-15 at 5.21.09 PM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Screen Shot 2020-03-15 at 6.09.28 PM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Screen Shot 2020-03-15 at 6.11.31 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagepro/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/imagepro/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myapp/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/templates/static/images/blur.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/templates/static/images/edge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,15 +21,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ZBQsdgZS6pyjjFRdkxPVu9YIg7" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../imagepro-sample" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="SvnConfiguration">
@@ -44,14 +49,22 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1585101538102">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1585101538102" />
     <state x="141" y="50" key="SettingsEditor" timestamp="1584312303308">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="141" y="50" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1584312303308" />
-    <state x="317" y="244" key="com.intellij.ide.util.TipDialog" timestamp="1585093378016">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state x="476" y="307" key="com.intellij.ide.util.TipDialog" timestamp="1585095513708">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="476" y="307" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1585095513708" />
     <state x="317" y="244" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1585093378016" />
   </component>
 </project>

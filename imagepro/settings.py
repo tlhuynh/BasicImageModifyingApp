@@ -25,12 +25,14 @@ SOFTWARE.
 # Django settings for imagepro project.
 import os.path
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-#get the dirName of the current project. should return the main dir
-#code below return the dir of the cur dir of this file, thus, reutrn the base dir
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_PATH = os.path.abspath(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'myapp','templates')
+
+STATIC_PATH = os.path.join(TEMPLATE_PATH,'static')
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -49,7 +51,7 @@ DATABASES = {
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = [ec2-35-175-145-77.compute-1.amazonaws.com]
+ALLOWED_HOSTS = [] #ec2-35-175-145-77.compute-1.amazonaws.com
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -76,33 +78,31 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = STATIC_PATH
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
 
-MEDIA_URL = 'http://127.0.0.1:8000/media/'
+MEDIA_URL = '/media/'
 
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, 'myapp', 'templates', 'static')
+STATIC_ROOT = os.path.join(PROJECT_PATH,)
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = 'http://127.0.0.1:8000/static/'
+STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    # "~Desktop/imagepro/myapp/templates/static",
-    #os.path.join(BASE_DIR, 'myapp', 'templates', 'static'),
-
+    STATIC_PATH,
 )
 
 # List of finder classes that know how to find static files in
@@ -142,7 +142,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'myapp','templates'),
+            TEMPLATE_PATH,
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -157,7 +157,7 @@ TEMPLATES = [
 ]
 
 TEMPLATE_DIRS = (
-    os.path.join(os.path.realpath(__file__), 'templates'),
+    TEMPLATE_PATH,
 )
 
 INSTALLED_APPS = (

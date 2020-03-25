@@ -22,16 +22,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 '''
 
-#from django.conf.urls.defaults import *    #deprecated
 from django.conf.urls import url, include
-
 from myapp.views import home, process
 
-# urlpatterns = patterns('',
-#     url(r'^$', 'myapp.views.home'),
-#     url(r'^process/$', 'myapp.views.process'),
-# )
 urlpatterns = [
     url(r'^$', home, name = 'home'),
     url(r'^process/$', process, name = 'process'),
 ]
+
