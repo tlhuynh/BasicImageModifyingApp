@@ -48,6 +48,18 @@ DATABASES = {
    }
 }
 
+AWS_DEFAULT_ACL = None
+#AWS_ACCESS_KEY_ID = 'ASIA2QQDUEC4LOTTN2BW'
+#AWS_SECRET_ACCESS_KEY = 'vO8Rjr7XtyavCPxEoFfCS2ckYUAEh2AKT8eXHq7h'
+AWS_STORAGE_BUCKET_NAME = 'tlhuynhbucket'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+AWS_LOCATION = 'static'
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
 
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
@@ -92,11 +104,14 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = os.path.join(PROJECT_PATH,)
+STATIC_ROOT = os.path.join(PROJECT_PATH,'templates')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = '/static/'
+#STATIC_URL = '/static/'
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -169,7 +184,8 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-     'myapp'
+     'myapp',
+     'storages',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -200,3 +216,4 @@ LOGGING = {
         },
     }
 }
+
