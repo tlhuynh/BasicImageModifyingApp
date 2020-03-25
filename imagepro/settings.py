@@ -25,7 +25,8 @@ SOFTWARE.
 # Django settings for imagepro project.
 import os.path
 
-DEBUG = True
+#DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 TEMPLATE_DEBUG = DEBUG
 
 PROJECT_PATH = os.path.abspath(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -51,7 +52,7 @@ DATABASES = {
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = [] #ec2-35-175-145-77.compute-1.amazonaws.com
+ALLOWED_HOSTS = ['*'] #ec2-35-174-107-30.compute-1.amazonaws.com
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -114,7 +115,8 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '8888$$$$@@7943523789afadsf)1'
+
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '8888$$$$@@7943523789afadsf)1') #'8888$$$$@@7943523789afadsf)1'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
