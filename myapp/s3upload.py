@@ -26,8 +26,8 @@ import os
 import boto.s3
 
 #modification here to work with boto3
-import boto3 as boto3
 
+#import boto3 as boto3
 conn = boto3.resource('s3')
 
 def percent_cb(complete, total):

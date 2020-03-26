@@ -2,9 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d18af160-b3fd-42ff-a80e-f6433811ed92" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/media/beu1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myapp/templates/static/output/beu1-out.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bash_profile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imagepro/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/blur.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/edge.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/gray.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/poster.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/sepia.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/solar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/jquery-1.4.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/jquery.smartWizard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/55981882-7CEF-4896-B1B0-B3544EE01C6F.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/7f2e7a331ed043026747a6eaa56e0a64.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/Screen Shot 2020-03-24 at 9.19.57 AM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/templates/static/output/55981882-7CEF-4896-B1B0-B3544EE01C6F-out.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/templates/static/output/7f2e7a331ed043026747a6eaa56e0a64-out.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/templates/static/output/Screen Shot 2020-03-24 at 9-out.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/demo_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/smart_wizard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/smart_wizard_vertical.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagepro/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/imagepro/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myapp/s3upload.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/s3upload.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

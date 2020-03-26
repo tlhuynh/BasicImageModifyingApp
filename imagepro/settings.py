@@ -25,7 +25,8 @@ SOFTWARE.
 # Django settings for imagepro project.
 import os.path
 
-DEBUG = True
+#DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 TEMPLATE_DEBUG = DEBUG
 
 PROJECT_PATH = os.path.abspath(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -47,11 +48,21 @@ DATABASES = {
    }
 }
 
+AWS_DEFAULT_ACL = None
+AWS_STORAGE_BUCKET_NAME = 'tlhuynhbucket'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+AWS_LOCATION = 'static'
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
 
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = [] #ec2-35-175-145-77.compute-1.amazonaws.com
+ALLOWED_HOSTS = ['*'] #ec2-35-174-107-30.compute-1.amazonaws.com
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -95,7 +106,10 @@ STATIC_ROOT = os.path.join(PROJECT_PATH,)
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = '/static/'
+#STATIC_URL = '/static/'
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -114,7 +128,8 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '8888$$$$@@7943523789afadsf)1'
+
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '8888$$$$@@7943523789afadsf)1') #'8888$$$$@@7943523789afadsf)1'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -167,7 +182,8 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-     'myapp'
+     'myapp',
+     'storages',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -198,3 +214,4 @@ LOGGING = {
         },
     }
 }
+

@@ -1,0 +1,2 @@
+m
+rt PATH=LOCAL_PATH:$PATH
