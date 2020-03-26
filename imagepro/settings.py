@@ -49,8 +49,6 @@ DATABASES = {
 }
 
 AWS_DEFAULT_ACL = None
-#AWS_ACCESS_KEY_ID = 'ASIA2QQDUEC4LOTTN2BW'
-#AWS_SECRET_ACCESS_KEY = 'vO8Rjr7XtyavCPxEoFfCS2ckYUAEh2AKT8eXHq7h'
 AWS_STORAGE_BUCKET_NAME = 'tlhuynhbucket'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {
@@ -104,7 +102,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = os.path.join(PROJECT_PATH,'templates')
+STATIC_ROOT = os.path.join(PROJECT_PATH,)
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
