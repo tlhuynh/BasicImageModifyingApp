@@ -26,8 +26,9 @@ import os
 import boto.s3
 
 #modification here to work with boto3
-conn = boto.connect_s3(aws_access_key_id='<enter>',
-     aws_secret_access_key='<enter>')
+import boto3 as boto3
+
+conn = boto3.resource('s3')
 
 def percent_cb(complete, total):
     print ('.')
