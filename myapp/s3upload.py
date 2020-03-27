@@ -42,10 +42,12 @@ def upload_to_s3_bucket_path(bucketname, path, filename):
 	key.set_contents_from_filename(filename, cb=percent_cb, num_cb=10)
 	#key.make_public(recursive=False)
 
-def upload_to_s3_bucket_root(bucketname, filename):
-	mybucket = conn.get_bucket(bucketname)
-	key = mybucket.new_key(filename)
-	key.set_contents_from_filename(filename, cb=percent_cb, num_cb=10)
+def upload_to_s3_bucket_root(bucketname, filename):	#update to work with boto3
+	mybucket = conn.Bucket(bucketname)
+	#key = mybucket.new_key(filename)
+	#key.set_contents_from_filename(filename, cb=percent_cb, num_cb=10)
+	mybucket.upload_file(Filename=filename, Key=filename)
+	
 
 def getuserfiles(bucketname,username):
 	mybucket = conn.get_bucket(bucketname)
