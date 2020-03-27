@@ -3,7 +3,7 @@ from django.shortcuts import render
 from myapp.forms import UploadFileForm
 from PIL import Image, ImageOps,ImageFilter
 import os.path
-from myapp.s3upload import upload_to_s3_bucket_root
+from myapp.s3upload import upload_to_s3_bucket_path
 
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -63,7 +63,7 @@ def home(request):
         if form.is_valid():
             preset=request.POST['preset']
             outputfilename = handle_uploaded_file(request.FILES['myfilefield'],preset)
-            upload_to_s3_bucket_root('tlhuynhbucket', 'outputfilename')
+            upload_to_s3_bucket_path('tlhuynhbucket', '/home/ec2-user/imageProcessing/myapp/templates/static/output',outputfilename)
             return render(request, 'process.html', {'outputfilename': outputfilename})
     else:
         form = UploadFileForm()
