@@ -35,11 +35,12 @@ conn = boto3.resource('s3')
 def percent_cb(complete, total):
     print ('.')
 
-def upload_to_s3_bucket_path(bucketname, path, filename):
-	mybucket = conn.get_bucket(bucketname)
-	fullkeyname=os.path.join(path,filename)
-	key = mybucket.new_key(fullkeyname)
-	key.set_contents_from_filename(filename, cb=percent_cb, num_cb=10)
+def upload_to_s3_bucket_path(bucketname, path, filename):	#update to work with boto3, here provide path to output file
+	mybucket = conn.Bucket(bucketname)
+	fullkeyname = os.path.join(path,filename)
+	mybucket.upload_file(Filename=fullkeyname, Key=fullkeyname)
+	#key = mybucket.new_key(fullkeyname)
+	#key.set_contents_from_filename(filename, cb=percent_cb, num_cb=10)
 	#key.make_public(recursive=False)
 
 def upload_to_s3_bucket_root(bucketname, filename):	#update to work with boto3
